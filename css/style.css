@@ -1,0 +1,35 @@
+/*
+Üzgünüm tasarım yeteneğim yok
+*/
+body {
+  overflow-y: auto;
+  margin: 30px;
+  padding: 0px;
+  text-align: left;
+  color: #FDFFFC;
+  background-color: #011627;
+}
+#rutbeler {
+  width: 500px;
+  height: 250px;
+}
+
+.istenilenRutbe {
+	float: left;
+	margin: 10px;
+	width: 30%;
+	height: 30%;
+	border: #FF9F1C solid 5px;
+	background-color: #2EC4B6;
+}
+.simdikiRutbe {
+	float: left;
+	margin: 10px;
+	width: 30%;
+	height: 30%;
+	border: #FF9F1C solid 5px;
+	background-color: #2EC4B6;
+  }
+  h1{
+	  text-align: center;
+  }

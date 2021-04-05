@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- https://github.com/malisahin89 -->
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>EloBoost</title>
+  </head>
+  <body>
+    <h1>ELO BOOST</h1>
+    <div class="rutbeler">
+      <div class="simdikiRutbe">
+        <h2>ŞİMDİKİ RÜTBE</h2>
+        <table>
+          <tr>
+            <td>LİG</td>
+            <td>DERECE</td>
+            <td>LP</td>
+          </tr>
+          <tr>
+            <td>
+              <select
+                name="simdikiRutbe"
+                id="simdikiRutbe"
+                onchange="gettier_old(), limit(), limit2()"
+              >
+                <option value="demir" selected>DEMİR</option>
+                <option value="bronz">BRONZ</option>
+                <option value="gumus">GÜMÜŞ</option>
+                <option value="altin">ALTIN</option>
+                <option value="platin">PLATİN</option>
+                <option value="elmas">ELMAS</option>
+              </select>
+            </td>
+            <td>
+              <select
+                name="eloboost-division-old"
+                id="eloboost-division-old"
+                onchange="gettier_old(), limit2()"
+              >
+                <option value="4">LİG 4</option>
+                <option value="3">LİG 3</option>
+                <option value="2">LİG 2</option>
+                <option value="1">LİG 1</option>
+              </select>
+            </td>
+            <td>
+              <select
+                name="eloboost-lp-old"
+                id="eloboost-lp-old"
+                onchange="gettier_lp(), gettier_old()"
+              >
+                <option value="3">20+ LP</option>
+                <option value="2">17-19 LP</option>
+                <option value="1">15-17 LP</option>
+                <option value="0" selected>0-15 LP</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <img
+          src="images/demir4.png"
+          alt="League"
+          id="tier-img-old"
+        />
+      </div>
+      <div class="istenilenRutbe">
+        <h2>iSTENİLEN RÜTBE</h2>
+        <table>
+          <tr>
+            <td>LİG</td>
+            <td>DERECE</td>
+          </tr>
+          <tr>
+            <td>
+              <select
+                name="istenilenRutbe"
+                id="istenilenRutbe"
+                onchange="gettier_new(), checktier()"
+              >
+                <option value="demir" selected>DEMİR</option>
+                <option value="bronz">BRONZ</option>
+                <option value="gumus">GÜMÜŞ</option>
+                <option value="altin">ALTIN</option>
+                <option value="platin">PLATİN</option>
+                <option value="elmas">ELMAS</option>
+                <option value="master">MASTER</option>
+              </select>
+            </td>
+            <td>
+              <select
+                name="eloboost-division-new"
+                id="eloboost-division-new"
+                onchange="gettier_new()"
+              >
+                <option value="4">LİG 4</option>
+                <option value="3" selected>LİG 3</option>
+                <option value="2">LİG 2</option>
+                <option value="1">LİG 1</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <img
+          src="images/demir3.png"
+          alt="League"
+          id="tier-img-new"
+        />
+      </div>
+    </div>
+
+    <center>
+      <button onclick="hesap()">HESAPLA</button>
+      <br />
+      <h2 id="fiyat">FİYAT: 0₺</h2>
+    </center>
+  </body>
+  <script type="text/javascript" src="js/eloboost.js"></script>
+</html>
